@@ -1,0 +1,51 @@
+{% extends 'base.html' %}
+{% load static %}
+
+{% block title %}
+    <title>Аналітика | WUA</title>
+    <link rel="stylesheet" href="{% static 'styles/analiz-graph.css' %}">
+    <link rel="stylesheet" href="{% static 'styles/header.css' %}">
+    <link rel="stylesheet" href="{% static 'styles/analiz-selectors.css' %}">
+    <link rel="stylesheet" href="{% static 'styles/spin.css' %}">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/slim-select/1.23.0/slimselect.min.css">
+{% endblock %}
+
+{% block content %}
+    {% include 'analytics_menu.html' %}
+    <?xml version="1.0" encoding="UTF-8" standalone="no"?>
+    <!-- Created with Inkscape (http://www.inkscape.org/) -->
+    <section class="stat-content">
+    <aside class="filters">
+<!--        <div class="filters__param-ver">-->
+<!--            <label class="label_selector wider">Від районів з найменшою генерацією до з найбільшою</label>-->
+<!--            &lt;!&ndash;<canvas id="myGradient"></canvas>&ndash;&gt;-->
+<!--            <svg id="myGradient" class="svg__color-bar"></svg>-->
+<!--        </div>-->
+<!--        <div class="filters__param-ver">-->
+<!--            <label for="waste-selector" class="label_selector">Категорія відходів:</label>-->
+<!--            <select name="waste" id="waste-selector" class="selector_city"></select>-->
+<!--        </div>-->
+        <div class="filters__param-ver">
+                <label for="city-selector" class="label_selector">Виберіть регіон:</label>
+                <select name="city" id="city-selector" class="selector_city"></select>
+            </div>
+        <div class="filters__param-ver">
+            <label for="year-selector" class="label_selector">Статистика по рокам:</label>
+            <select name="year" id="year-selector"  multiple></select>
+        </div>
+    </aside>
+    <section class="main_content">
+        <pre class="title_graph">Under construction</pre>
+        <div id="chart"></div>
+    </section>
+    </section>
+    <div id="spinner"></div>
+    <script src="https://d3js.org/d3.v5.min.js"></script>
+    <script>
+        // var dataset = {{ p_s|safe }};
+        var dataset = {{ p_s|safe }};
+    </script>
+    <script src="https://d3js.org/d3-scale-chromatic.v1.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/slim-select/1.23.0/slimselect.min.js"></script>
+    <script type="module" src="{% static 'scripts/analiz-other.js' %}"></script>
+{% endblock %}
