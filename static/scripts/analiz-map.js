@@ -53,6 +53,8 @@ spinner.spin(target);
 
 // var dataset = d3.csv("../data/all_gen_wyear.csv");
 
+// const colors = ['#00ffa3', '#3c6053']
+// '#edff6c', '#6fc390'
 const colors = ['#00ffa3', '#3c6053']
 // var c = document.getElementById("myGradient");
 // var ctx = c.getContext("2d");
@@ -94,6 +96,14 @@ svg.append('rect')
     .attr('height', 70)
     .attr('x', color_margin)
     .style('fill', 'url(#grad)')
+    // .attr('stroke', 'black')
+    // .attr('stroke-width', 1)
+
+// svg.append('rect')
+//     .attr('width', color_width)
+//     .attr('height', 70)
+//     .attr('x', color_margin)
+//     .style('fill', 'url(#grad)')
 
 
     // .attr("y", 40)
@@ -248,6 +258,7 @@ let main = function () {
             .attr("transform", `translate(${color_margin}, ${color_height})`)
             .call(yAxis)
             .append("text")
+            .style('font-size', '16px')
             .attr("transform", "rotate(-90)")
             .style("text-anchor", "end")
 

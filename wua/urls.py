@@ -15,19 +15,13 @@ Including another URLconf
 """
 from django.contrib import admin
 from django.urls import path, include
-from pages.views import home_view, market_list, analytics_graph, analytics_map, market_create, gen_detail, about, analytics_other
+from pages.views import about
 
 urlpatterns = [
     path('admin/', admin.site.urls),
     # path('', post_list, name='HOME | WUA'),
-    path('market/create/', market_create, name='market_create'),
-    path('market/list/', market_list, name='market_list'),
-    path('market/details/<int:pk>/', gen_detail, name='generator_detail'),
-    path('analytics/graph/', analytics_graph, name='analytics_graph'),
-    path('analytics/map/', analytics_map, name='analytics_map'),
     path('about/', about, name='about_us'),
-    path('analytics/other/', analytics_other, name='analytics_other'),
-
-    # path('market/', include('market.urls')),
+    path('analytics/', include('analytics.urls')),
+    path('market/', include('market.urls')),
 ]
 handler404 = 'pages.views.error_404_view'
