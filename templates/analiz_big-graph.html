@@ -48,21 +48,20 @@
         <main class="main_content">
             <pre class="title_graph"></pre>
             <div class="filters__param-hor graph-management">
-                <div class="filters__param-ver">
-                <label class="label_selector small">Початок з:</label>
-                <div>
-                    <button type='button' class="button_arrows button_arrows__left" onclick="ArOper(-1, 0)">-</button>
-                    <input class="input_number input_number__first" onchange="inputNumber(0, 0)" type="number" step="1" min="1">
-                    <button type='button' class="button_arrows button_arrows__right" onclick="ArOper(1, 0)">+</button>
-                </div>
-            </div>
-
-            <div class="filters__param-ver">
+            <div class="filters__param-hor kilkist_selector">
                 <label class="label_selector small">Кількість підприємств на графіку:</label>
                 <div>
                     <button type='button' class="button_arrows button_arrows__left" onclick="ArOper(-1, 1)">-</button>
                     <input class="input_number input_number__second" onchange="inputNumber(0, 1)" type="number" step="1" min="2" max="11">
                     <button type='button' class="button_arrows button_arrows__right" onclick="ArOper(1, 1)">+</button>
+                </div>
+            </div>
+                <div class="filters__param-hor">
+                <label class="label_selector small">Початок з:</label>
+                <div>
+                    <button type='button' class="button_arrows button_arrows__left" onclick="ArOper(-1, 0)">-</button>
+                    <input class="input_number input_number__first" onchange="inputNumber(0, 0)" type="number" step="1" min="1">
+                    <button type='button' class="button_arrows button_arrows__right" onclick="ArOper(1, 0)">+</button>
                 </div>
             </div>
                 <div class="filters__param-hor box">

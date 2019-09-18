@@ -152,7 +152,7 @@ function wrap_axis(text, width) {
 let sel_city = document.getElementById('city-selector');
 let sel_waste = document.getElementById('waste-selector');
 
-let inp_num = Array.from(document.getElementsByClassName("input_number"));
+let inp_num = Array.from(document.getElementsByClassName("input_number")).reverse();
 let sel_city_value = sel_city.value;
 let sel_waste_value = sel_waste.value;
 let sel_year_values = function (){
@@ -327,7 +327,6 @@ let main = function () {
         )});
 
     coords.then(function (data) {
-        console.log(data)
         spinner.stop(target)
         dataLength = data.length;
         d3.select('.input_number__first')

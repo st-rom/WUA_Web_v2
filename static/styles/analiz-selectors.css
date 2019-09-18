@@ -1,6 +1,7 @@
 .stat-content {
   display: flex;
-  justify-content: space-between;
+  justify-content: start;
+  margin-left: 35px;
 }
 
 .filters {
@@ -25,13 +26,16 @@
   align-items: center;
   align-content: space-between;
 }
+.filters__param-hor.kilkist_selector {
+  align-items: end;
+}
 .filters__param-hor.box {
   border: solid #c0c0c0 2px;
   height: 47px;
   margin-right: 250px;
   align-self: flex-end;
   border-radius: 10px;
-  margin-left: 20px;
+  margin-left: 40px;
 }
 .filters__param-hor.box :nth-child(2) {
   border-right: solid #c0c0c0 2px;
@@ -84,6 +88,7 @@
   width: 220px;
 }
 .label_selector.small {
+  margin-bottom: 0;
   font-size: 18px;
   width: 150px;
   font-weight: 500;
@@ -234,6 +239,7 @@ button::-moz-focus-inner, input::-moz-focus-inner, select::-moz-focus-inner {
   flex-direction: column;
   align-items: center;
   align-content: center;
+  margin-left: 35px;
 }
 
 div.ss-multi-selected {
