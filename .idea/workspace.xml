@@ -2,13 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="7ef3f295-43a6-464f-8d1d-996763d919c4" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/static/scripts/analiz_big-graph.js" beforeDir="false" afterPath="$PROJECT_DIR$/static/scripts/analiz_big-graph.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/static/styles/analiz-selectors.css" beforeDir="false" afterPath="$PROJECT_DIR$/static/styles/analiz-selectors.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/static/styles/analiz-selectors.css.map" beforeDir="false" afterPath="$PROJECT_DIR$/static/styles/analiz-selectors.css.map" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/static/styles/analiz-selectors.scss" beforeDir="false" afterPath="$PROJECT_DIR$/static/styles/analiz-selectors.scss" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/templates/analiz_big-graph.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/analiz_big-graph.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/templates/header.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/header.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/styles/analiz-other.scss" beforeDir="false" afterPath="$PROJECT_DIR$/static/styles/analiz-other.scss" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -163,7 +157,7 @@
       <workItem from="1568499088972" duration="28128000" />
       <workItem from="1568580318558" duration="15796000" />
       <workItem from="1568719165590" duration="17405000" />
-      <workItem from="1568756374355" duration="11406000" />
+      <workItem from="1568756374355" duration="11748000" />
     </task>
     <task id="LOCAL-00001" summary="new icon">
       <created>1568664776348</created>
@@ -186,7 +180,14 @@
       <option name="project" value="LOCAL" />
       <updated>1568800441276</updated>
     </task>
-    <option name="localTasksCounter" value="4" />
+    <task id="LOCAL-00004" summary="marta's fixes part 2">
+      <created>1568804553331</created>
+      <option name="number" value="00004" />
+      <option name="presentableId" value="LOCAL-00004" />
+      <option name="project" value="LOCAL" />
+      <updated>1568804553331</updated>
+    </task>
+    <option name="localTasksCounter" value="5" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -209,7 +210,8 @@
     <MESSAGE value="new icon" />
     <MESSAGE value="analytics app" />
     <MESSAGE value="marta's fixes part 1" />
-    <option name="LAST_COMMIT_MESSAGE" value="marta's fixes part 1" />
+    <MESSAGE value="marta's fixes part 2" />
+    <option name="LAST_COMMIT_MESSAGE" value="marta's fixes part 2" />
   </component>
   <component name="com.intellij.coverage.CoverageDataManagerImpl">
     <SUITE FILE_PATH="coverage/wua_proba$db_filler.coverage" NAME="db_filler Coverage Results" MODIFIED="1568296641236" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/wua" />
