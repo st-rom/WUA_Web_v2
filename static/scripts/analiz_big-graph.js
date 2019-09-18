@@ -261,7 +261,7 @@ let main = function () {
             .enter()
             .append('option')
             .text(d => d)
-            .attr('class', 'option_with_hint')
+            // .attr('class', 'option_with_hint')
             .attr('title', function(d, i) {
                 var res = waste_code_explanations[i]
                 if(i > 1){
@@ -281,7 +281,6 @@ let main = function () {
             select: '#year-selector',
             placeholder: 'Оберіть рік/роки',
             onChange: () => {
-                console.log(999)
                 sel_year_values = function (){
                     const d = d3.selectAll('.ss-value-text')
                     let vals = []
@@ -328,6 +327,7 @@ let main = function () {
         )});
 
     coords.then(function (data) {
+        console.log(data)
         spinner.stop(target)
         dataLength = data.length;
         d3.select('.input_number__first')

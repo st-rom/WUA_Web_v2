@@ -14,7 +14,7 @@
 {% block content %}
     {% include 'analytics_menu.html' %}
     <section class="stat-content">
-        <aside class="filters">
+        <aside class="filters graph-lineage">
             <div class="filters__param-ver">
                 <label for="city-selector" class="label_selector">Виберіть область:</label>
                 <select name="city" id="city-selector" class="selector_city"></select>
@@ -27,23 +27,7 @@
                 <label for="year-selector" class="label_selector">Статистика по рокам:</label>
                 <select name="year" id="year-selector"  multiple></select>
             </div>
-            <div class="filters__param-hor">
-                <label class="label_selector">Від номера в рейтингу:</label>
-                <div>
-                    <button type='button' class="button_arrows button_arrows__left" onclick="ArOper(-1, 0)">-</button>
-                    <input class="input_number input_number__first" onchange="inputNumber(0, 0)" type="number" step="1" min="1">
-                    <button type='button' class="button_arrows button_arrows__right" onclick="ArOper(1, 0)">+</button>
-                </div>
-            </div>
 
-            <div class="filters__param-hor">
-                <label class="label_selector">Кількість даних на сторінці:</label>
-                <div>
-                    <button type='button' class="button_arrows button_arrows__left" onclick="ArOper(-1, 1)">-</button>
-                    <input class="input_number input_number__second" onchange="inputNumber(0, 1)" type="number" step="1" min="2" max="11">
-                    <button type='button' class="button_arrows button_arrows__right" onclick="ArOper(1, 1)">+</button>
-                </div>
-            </div>
 
             <div class="filters__param-ver">
                 <label class="label_selector">Пошук по назві:</label>
@@ -63,10 +47,29 @@
         </aside>
         <main class="main_content">
             <pre class="title_graph"></pre>
-            <div class="filters__param-hor box">
-                <pre class="scroller_text"></pre>
-                <button type='button' class="button_scroll" onclick="ArOper(-1, 2)"><</button>
-                <button type='button' class="button_scroll" onclick="ArOper(1, 2)">></button>
+            <div class="filters__param-hor graph-management">
+                <div class="filters__param-ver">
+                <label class="label_selector small">Початок з:</label>
+                <div>
+                    <button type='button' class="button_arrows button_arrows__left" onclick="ArOper(-1, 0)">-</button>
+                    <input class="input_number input_number__first" onchange="inputNumber(0, 0)" type="number" step="1" min="1">
+                    <button type='button' class="button_arrows button_arrows__right" onclick="ArOper(1, 0)">+</button>
+                </div>
+            </div>
+
+            <div class="filters__param-ver">
+                <label class="label_selector small">Кількість підприємств на графіку:</label>
+                <div>
+                    <button type='button' class="button_arrows button_arrows__left" onclick="ArOper(-1, 1)">-</button>
+                    <input class="input_number input_number__second" onchange="inputNumber(0, 1)" type="number" step="1" min="2" max="11">
+                    <button type='button' class="button_arrows button_arrows__right" onclick="ArOper(1, 1)">+</button>
+                </div>
+            </div>
+                <div class="filters__param-hor box">
+                    <pre class="scroller_text"></pre>
+                    <button type='button' class="button_scroll" onclick="ArOper(-1, 2)"><</button>
+                    <button type='button' class="button_scroll" onclick="ArOper(1, 2)">></button>
+                </div>
             </div>
             <svg>
             </svg>

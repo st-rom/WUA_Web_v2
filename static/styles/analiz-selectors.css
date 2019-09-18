@@ -11,6 +11,9 @@
   height: 800px;
   width: 380px;
 }
+.filters.graph-lineage {
+  margin-top: 165px;
+}
 .filters__param-ver {
   display: flex;
   flex-direction: column;
@@ -23,23 +26,28 @@
   align-content: space-between;
 }
 .filters__param-hor.box {
-  border: solid #6ba188 3px;
-  height: 51px;
+  border: solid #c0c0c0 2px;
+  height: 47px;
   margin-right: 250px;
   align-self: flex-end;
   border-radius: 10px;
+  margin-left: 20px;
 }
 .filters__param-hor.box :nth-child(2) {
-  border-right: solid #6ba188 3px;
-  border-left: solid #6ba188 3px;
+  border-right: solid #c0c0c0 2px;
+  border-left: solid #c0c0c0 2px;
 }
-
+.filters__param-hor.graph-management {
+  width: 85%;
+  align-items: end;
+  justify-content: end;
+}
 .selector_city {
   width: 360px;
   height: 51px;
   border-radius: 15px;
   border: solid #c0c0c0 2px;
-  font-size: 20px;
+  font-size: 18px;
   font-family: "Roboto", sans-serif;
   color: black;
   cursor: pointer;
@@ -66,14 +74,19 @@
 
 .label_selector {
   font-family: "Open Sans", sans-serif;
-  font-size: 24px;
+  font-size: 22px;
   text-align: center;
   font-weight: 700;
-  width: 160px;
+  width: 360px;
   margin: 0 10px 15px 10px;
 }
 .label_selector.wider {
   width: 220px;
+}
+.label_selector.small {
+  font-size: 18px;
+  width: 150px;
+  font-weight: 500;
 }
 
 .input_number {
@@ -117,7 +130,7 @@
   font-size: 20px;
   font-family: "Roboto", sans-serif;
   text-align: center;
-  height: 55px;
+  height: 51px;
   width: 40px;
   margin: -1px;
   border: none;
@@ -154,7 +167,7 @@ input[type=number]::-webkit-outer-spin-button {
   width: 300px;
   height: 45px;
   border: none;
-  font-size: 20px;
+  font-size: 18px;
   font-family: "Roboto", sans-serif;
 }
 .name_search__list {
@@ -174,7 +187,7 @@ input[type=number]::-webkit-outer-spin-button {
   width: 340px;
   height: 51px;
   border: solid #c0c0c0 2px;
-  font-size: 20px;
+  font-size: 22px;
   font-family: "Roboto", sans-serif;
   color: black;
   cursor: pointer;
@@ -208,7 +221,7 @@ button::-moz-focus-inner, input::-moz-focus-inner, select::-moz-focus-inner {
 
 .title_graph {
   font-family: "Roboto", sans-serif;
-  font-size: 42px;
+  font-size: 36px;
   max-width: 900px;
   white-space: pre-wrap;
   word-break: keep-all;
@@ -224,12 +237,16 @@ button::-moz-focus-inner, input::-moz-focus-inner, select::-moz-focus-inner {
 }
 
 div.ss-multi-selected {
-  width: 340px;
+  width: 360px !important;
   min-height: 51px !important;
   border-radius: 15px !important;
   border: solid #c0c0c0 2px !important;
   font-size: 20px;
   font-family: "Roboto", sans-serif;
+}
+
+.ss-values {
+  padding-left: 3px;
 }
 
 /*# sourceMappingURL=analiz-selectors.css.map */

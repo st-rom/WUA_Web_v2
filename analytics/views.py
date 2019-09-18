@@ -16,9 +16,10 @@ def analytics_map(request):
 
 
 def analytics_other(request):
-    # posts = Generator.objects.all()
+    posts_all = Generator.objects.all()
     # posts = Generator.objects.aggregate(Sum('tonnes_total'))
     posts = {**Generator.objects.aggregate(Sum('tonnes_1')), **Generator.objects.aggregate(Sum('tonnes_2')), **Generator.objects.aggregate(Sum('tonnes_3')), **Generator.objects.aggregate(Sum('tonnes_4'))}
-    # posts_serialized = serializers.serialize('json', posts)
+    posts_serialized2 = serializers.serialize('json', posts_all)
     posts_serialized = json.dumps(posts)
-    return render(request, 'analiz_other.html', {'p_s': posts_serialized})
+    # posts_serialized2 = json.dumps(posts_all)
+    return render(request, 'analiz_other.html', {'p_s': posts_serialized, 'all_data': posts_serialized2})

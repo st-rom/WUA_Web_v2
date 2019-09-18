@@ -1,5 +1,5 @@
 @import url("https://fonts.googleapis.com/css?family=Roboto:700&display=swap");
-
+$color-brand: #62E6AC;
 
 body{
     margin: 110px 2.5% 0 2.5%;
@@ -114,7 +114,7 @@ body{
             cursor: pointer;
             margin-right: 30px;
             &--selected{
-                border-bottom: 4px solid #55eca7;
+                border-bottom: 4px solid $color-brand;
             }
         }
     }

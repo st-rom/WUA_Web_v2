@@ -1,7 +1,23 @@
-var width = 1200;
-var height = 800;
+var width = 600;
+var height = 400;
+var a = [{level:1},{level:2},{level:3},{level:4}]
 
 // a circle chart needs a radius
+const koatuu = ['05', '07', '12', '14', '18', '21', '23', '26', '32', '35', '44', '46', '48', '51', '53', '56', '59', '61', '63', '65', '68', '71', '73', '74', '01']
+const obls = ['Всі області', 'Вінницька область', 'Волинська область', 'Дніпропетровська область', 'Донецька область', 'Житомирська область', 'Закарпатська область', 'Запорізька область', 'Івано-Франківська область', 'Київська область', 'Кіровоградська область', 'Луганська область', 'Львівська область', 'Миколаївська область', 'Одеська область', 'Полтавська область', 'Рівненська область', 'Сумська область', 'Тернопільська область', 'Харківська область', 'Херсонська область', 'Хмельницька область', 'Черкаська область', 'Чернівецька область', 'Чернігівська область',  'АР Крим' ]
+const years = ['2015', '2016', '2017', '2018', '2019']
+
+let sel_city = document.getElementById('city-selector');
+let sel_city_value = sel_city.value;
+let sel_year_values = function (){
+    const d = d3.selectAll('.ss-value-text')
+    let vals = []
+    d.each(function () {
+        vals.push(this.innerText)
+    })
+    return vals
+}();
+
 var radius = Math.min(width, height) / 2;
 
 // legend dimensions
@@ -13,26 +29,102 @@ var legendSpacing = 6; // defines spacing between squares
 
 // define color scale
 var colors = ['#69c242', '#64bbe3', '#ffcc00', '#ff7300'];
-// console.log(new Map())
 // var map = new Object({[1,2],[3,4]});
-var dict = []
-for (var i = 0; i < 4; i++) {
-    dict.push({
-        label: Object.keys(dataset)[i],
-        count: Object.values(dataset)[i]
-    });
-}
-console.log(d3["schemeCategory20c"]);
+
+
+let dataset = new Object();
+
+d3.select("#city-selector")
+    .selectAll('option')
+    .data(obls)
+    .enter()
+    .append('option')
+    .text(d => d);
+
+
+let main = function () {
+    if((sel_city_value !== sel_city.value) && (sel_city_value !== '')){
+        // nx = 0;
+        sel_city_value = sel_city.value;
+        // sel_waste_value = sel_waste.value;
+        // inp_num[0].value = 1;
+        // inp_num[1].value = 10;
+    }
+    else if(sel_city_value !== sel_city.value){
+        sel_city_value = sel_city.value;
+        // sel_waste_value = sel_waste.value;
+    }
+
+    d3.select('#year-selector')
+        .selectAll('option')
+        .data(years)
+        .enter()
+        .append('option')
+        .text(d => d)
+        .attr('selected', '');
+
+
+    new SlimSelect({
+        select: '#year-selector',
+        placeholder: 'Оберіть рік/роки',
+        onChange: () => {
+            sel_year_values = function (){
+                const d = d3.selectAll('.ss-value-text')
+                let vals = []
+                d.each(function () {
+                    vals.push(this.innerText)
+                })
+                return vals
+            }();
+            main();
+        }
+    })
+
+
+    sel_year_values = function (){
+        const d = d3.selectAll('.ss-value-text')
+        let vals = []
+        d.each(function () {
+            vals.push(this.innerText)
+        })
+        return vals
+    }();
+
+    let data_filtered = data_all
+    .filter(function(results){
+        if (typeof koatuu[sel_city.selectedIndex] === 'object' && (results['fields']['koatuu'].startsWith(koatuu[sel_city.selectedIndex][0]) || results['fields']['koatuu'].startsWith(koatuu[sel_city.selectedIndex][1]))) {
+            return true
+        }
+        return results['fields']['koatuu'].startsWith(koatuu[sel_city.selectedIndex]);
+    })
+
+    for (let i = 1; i < 5; i++) {
+        let by_year_sum = 0
+        for (let j = 0; j < sel_year_values.length; j++) {
+            // console.log(typeof Math.round(results[sel_year_values[j] + '_' + sel_waste.options[sel_waste.selectedIndex].value] * 1000))
+            by_year_sum += data_filtered.reduce( function(cnt,o){ return cnt + o['fields']['tonnes_' + i.toString() + '_' + sel_year_values[j]]; }, 0)
+            // by_year_sum += results['fields']['tonnes_' + i.toString() + '_' + sel_year_values[j]]
+        }
+        dataset['class_' + i.toString()] = by_year_sum
+    }
+    console.log(dataset)
+
+
 var color = d3.scaleOrdinal(colors);
 // more color scales: https://bl.ocks.org/pstuffa/3393ff2711a53975040077b7453781a9
+d3.select('#chart')
+    .selectAll("*")
+    .remove()
+
 
 var svg = d3.select('#chart') // select element in the DOM with id 'chart'
-  .append('svg') // append an svg element to the element we've selected
-  .attr('width', width) // set the width of the svg element we just added
-  .attr('height', height) // set the height of the svg element we just added
-  .append('g') // append 'g' element to the svg element
-  .attr('transform', 'translate(' + (width / 2) + ',' + (height / 2) + ')'); // our reference is now to the 'g' element. centerting the 'g' element to the svg element
-console.log(dict)
+    .append('svg') // append an svg element to the element we've selected
+    .attr('width', width) // set the width of the svg element we just added
+    .attr('height', height) // set the height of the svg element we just added
+    .append('g') // append 'g' element to the svg element
+    .attr('transform', 'translate(' + (width / 2 - 90)  + ',' + (height / 2) + ')'); // our reference is now to the 'g' element. centerting the 'g' element to the svg element
+
+
 var arc = d3.arc()
   .innerRadius(0) // none for pie chart
   .outerRadius(radius); // size of overall chart
@@ -67,6 +159,13 @@ tooltip.append('div') // add divs to the tooltip defined above
 //     </div>
 //   </div>
 // </div>
+var dict = []
+for (var i = 0; i < 4; i++) {
+    dict.push({
+        label: Object.keys(dataset)[i],
+        count: Object.values(dataset)[i]
+    });
+}
 
 Object.values(dict).forEach(function(d) {
   d.count = +d.count; // calculate count as we iterate through the data
@@ -75,12 +174,19 @@ Object.values(dict).forEach(function(d) {
 
 // creating the chart
 var path = svg.selectAll('path') // select all path elements inside the svg. specifically the 'g' element. they don't exist yet but they will be created below
-  .data(pie(dict)) //associate dict wit he path elements we're about to create. must pass through the pie function. it magically knows how to extract values and bakes it into the pie
-  .enter() //creates placeholder nodes for each of the values
-  .append('path') // replace placeholders with path elements
-  .attr('d', arc) // define d attribute with arc function above
-  .attr('fill', function(d) { return color(d.data.label); }) // use color scale to define fill of each label in dict
-  .each(function(d) { this.current - d; }); // creates a smooth animation for each track
+    .data(pie(dict)) //associate dict wit he path elements we're about to create. must pass through the pie function. it magically knows how to extract values and bakes it into the pie
+    .enter() //creates placeholder nodes for each of the values
+    .append('path') // replace placeholders with path elements
+    .attr('d', arc) // define d attribute with arc function above
+    .attr('fill', function(d) { return color(d.data.label); }) // use color scale to define fill of each label in dict
+    .each(function(d) { this.current - d; }) // creates a smooth animation for each track
+    // .append('title')
+    // .attr('x', legendRectSize + legendSpacing)
+    // .attr('y', legendRectSize - legendSpacing)
+    // .text(function(d) { return d.droundata.label; });
+                        // .style('max-width', 50)
+    // .text(() =>  sel_waste.options[sel_waste.selectedIndex].value.endsWith('ПЗУВ') ? obls[i] + ': ' + (Math.round(obls_sum[i] ) / 1000).toString()     : obls[i] + ': ' + (Math.round(obls_sum[i] ) / 1000).toString() + ' kтонн (* 10^3)');
+
 
 // mouse event handlers are attached to path so they need to come after its definition
 path.on('mouseover', function(d) {  // when mouse enters div
@@ -89,8 +195,8 @@ path.on('mouseover', function(d) {  // when mouse enters div
   }));
  var percent = Math.round(1000 * d.data.count / total) / 10; // calculate percent
  tooltip.select('.label').html(d.data.label); // set current label
- tooltip.select('.count').html('$' + d.data.count); // set current count
- tooltip.select('.percent').html(percent + '%'); // set percent calculated above
+ tooltip.select('.count').html((Math.round(parseFloat(d.data.count) * 1000) / 1000).toString() + ' тонн'); // set current count
+ // tooltip.select('.percent').html(percent + '%'); // set percent calculated above
  tooltip.style('display', 'block'); // set display
 });
 
@@ -112,7 +218,7 @@ var legend = svg.selectAll('.legend') // selecting elements with class 'legend'
   .attr('transform', function(d, i) {
     var height = legendRectSize + legendSpacing; // height of element is the height of the colored square plus the spacing
     var offset =  height * color.domain().length / 2; // vertical offset of the entire legend = height of a single element & half the total number of elements
-    var horz = 18 * legendRectSize; // the legend is shifted to the left to make room for the text
+    var horz = 10 * legendRectSize; // the legend is shifted to the left to make room for the text
     var vert = i * height - offset; // the top of the element is hifted up or down from the center using the offset defiend earlier and the index of the current element 'i'
       return 'translate(' + horz + ',' + vert + ')'; //return translation
    });
@@ -133,7 +239,7 @@ legend.append('rect') // append rectangle squares to legend
     if (rect.attr('class') === 'disabled') { // if class is disabled
       rect.attr('class', ''); // remove class disabled
     } else { // else
-      if (totalEnabled < 2) return; // if less than two labels are flagged, exit
+      if (totalEnabled < 2) return;// if less than two labels are flagged, exit
       rect.attr('class', 'disabled'); // otherwise flag the square disabled
       enabled = false; // set enabled to false
     }
@@ -161,3 +267,37 @@ legend.append('text')
   .attr('x', legendRectSize + legendSpacing)
   .attr('y', legendRectSize - legendSpacing)
   .text(function(d) { return d; }); // return label
+
+
+};
+
+sel_city.addEventListener("click", main);
+sel_city.click()
+
+// console.log(data_all[0]['fields'])
+
+// .filter(function (results) {
+//     if
+// })
+//     .map(function (results) {
+//         let dataset = {}
+//         for (let i = 0; i < 4; i++) {
+//             let by_year_sum = 0
+//             for (let j = 0; j < sel_year_values.length; j++) {
+//                 // console.log(typeof Math.round(results[sel_year_values[j] + '_' + sel_waste.options[sel_waste.selectedIndex].value] * 1000))
+//                 by_year_sum += results['fields']['tonnes_' + i.toString() + sel_year_values[j]]
+//             }
+//             dataset['class ' + i.toString()] = by_year_sum
+//         }
+//         return dataset
+//         // return [results.Name, Math.round(by_year_sum * 1000) / 1000, results.EDRPOU, results.KOATUU];
+//
+//     })
+    // .sort(function(a, b){
+    //     return b[1]-a[1]
+    // })
+// function (results) {
+
+// console.log(dataset)
+
+// dataset = data_all

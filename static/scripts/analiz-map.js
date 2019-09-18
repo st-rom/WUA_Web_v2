@@ -230,11 +230,11 @@ let main = function () {
             // })
 
         )
-    });
+    })
 
-
-    coords.then(function (data) {
-        // console.log(data[0])
+    coords.then(function () {
+        // console.log(data)
+        // // console.log(data[0])
         spinner.stop(target)
         // obls_sum = obls_sum.map(d => Math.round(d * 1000) / 1000)
         // console.log(obls_sum)

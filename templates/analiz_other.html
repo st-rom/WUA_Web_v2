@@ -3,7 +3,7 @@
 
 {% block title %}
     <title>Аналітика | WUA</title>
-    <link rel="stylesheet" href="{% static 'styles/analiz-graph.css' %}">
+    <link rel="stylesheet" href="{% static 'styles/analiz-other.css' %}">
     <link rel="stylesheet" href="{% static 'styles/header.css' %}">
     <link rel="stylesheet" href="{% static 'styles/analiz-selectors.css' %}">
     <link rel="stylesheet" href="{% static 'styles/spin.css' %}">
@@ -44,6 +44,9 @@
     <script>
         // var dataset = {{ p_s|safe }};
         var dataset = {{ p_s|safe }};
+        // console.log(3, {{all_data|safe}}[0])
+        var data_all = {{all_data|safe}}
+        // console.log(JSON.parse({{all_data|safe}}))
     </script>
     <script src="https://d3js.org/d3-scale-chromatic.v1.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/slim-select/1.23.0/slimselect.min.js"></script>
