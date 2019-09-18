@@ -8,80 +8,82 @@
 
 
 {% block content %}
-<section>
-    <table>
-        <caption><b><h2>{{ gen.name }}</h2></b></caption>
-      <tr>
-       <td>ЄДРПОУ</td>
-          <td>{{ gen.edrpou }}</td>
-      </tr>
-      <tr>
-       <td>
-          КОАТУУ
-       </td>
-       <td>
-           {{ gen.koatuu }}
-       </td>
-      </tr>
-      <tr>
-       <td>
-          Адреса
-       </td>
-       <td>
-           {{ gen.address }}
-       </td>
-      </tr>
-      <tr>
-       <td>
-          Контакти
-       </td>
-       <td>
-           {{ gen.contacts }}
-       </td>
-      </tr>
-      <tr>
-       <td>Згенеровано відходів в тоннах</td>
-       <td>{{ gen.tonnes_total|floatformat:3 }}</td>
-      </tr>
-            <tr>
-       <td>Відходів в одиницях Пзув</td>
-       <td>{{ gen.pzuv_total|floatformat:3 }}</td>
-      </tr>
-           <tr>
-       <td>Відходи I класу</td>
-       <td>{{ gen.tonnes_1|floatformat:3 }}</td>
-      </tr>
-           <tr>
-       <td>Відходи II класу</td>
-       <td>{{ gen.tonnes_2|floatformat:3 }}</td>
-      </tr>
-           <tr>
-       <td>Відходи III класу</td>
-       <td>{{ gen.tonnes_3|floatformat:3 }}</td>
-      </tr>
+<main>
+    <section>
+        <table>
+            <caption><b><h2>{{ gen.name }}</h2></b></caption>
+          <tr>
+           <td>ЄДРПОУ</td>
+              <td>{{ gen.edrpou }}</td>
+          </tr>
+          <tr>
+           <td>
+              КОАТУУ
+           </td>
+           <td>
+               {{ gen.koatuu }}
+           </td>
+          </tr>
+          <tr>
+           <td>
+              Адреса
+           </td>
+           <td>
+               {{ gen.address }}
+           </td>
+          </tr>
+          <tr>
+           <td>
+              Контакти
+           </td>
+           <td>
+               {{ gen.contacts }}
+           </td>
+          </tr>
+          <tr>
+           <td>Згенеровано відходів в тоннах</td>
+           <td>{{ gen.tonnes_total|floatformat:3 }}</td>
+          </tr>
                 <tr>
-       <td>Відходи IV класу</td>
-       <td>{{ gen.tonnes_4|floatformat:3 }}</td>
-      </tr>
-    </table>
+           <td>Відходів в одиницях Пзув</td>
+           <td>{{ gen.pzuv_total|floatformat:3 }}</td>
+          </tr>
+               <tr>
+           <td>Відходи I класу</td>
+           <td>{{ gen.tonnes_1|floatformat:3 }}</td>
+          </tr>
+               <tr>
+           <td>Відходи II класу</td>
+           <td>{{ gen.tonnes_2|floatformat:3 }}</td>
+          </tr>
+               <tr>
+           <td>Відходи III класу</td>
+           <td>{{ gen.tonnes_3|floatformat:3 }}</td>
+          </tr>
+                    <tr>
+           <td>Відходи IV класу</td>
+           <td>{{ gen.tonnes_4|floatformat:3 }}</td>
+          </tr>
+        </table>
 
-<!--     <tfoot>-->
-<!--      <tr>-->
-<!--       <th colspan="3">Subtotal</th>-->
-<!--       <td> 110.00</td>-->
-<!--      </tr>-->
-<!--      <tr>-->
-<!--       <th>Tax</th>-->
-<!--       <td> 8% </td>-->
-<!--       <td>8.80</td>-->
-<!--      </tr>-->
-<!--      <tr>-->
-<!--       <th colspan="3">Grand Total</th>-->
-<!--       <td>$ 118.80</td>-->
-<!--      </tr>-->
-<!--     </tfoot>-->
-</table>
-</section>
+    <!--     <tfoot>-->
+    <!--      <tr>-->
+    <!--       <th colspan="3">Subtotal</th>-->
+    <!--       <td> 110.00</td>-->
+    <!--      </tr>-->
+    <!--      <tr>-->
+    <!--       <th>Tax</th>-->
+    <!--       <td> 8% </td>-->
+    <!--       <td>8.80</td>-->
+    <!--      </tr>-->
+    <!--      <tr>-->
+    <!--       <th colspan="3">Grand Total</th>-->
+    <!--       <td>$ 118.80</td>-->
+    <!--      </tr>-->
+    <!--     </tfoot>-->
+        </table>
+    </section>
+</main>
 <!--<section class="page_content">-->
 <!--        <header class="page_content__header">-->
 <!--            <button onclick="location.href='market_create-lot.html'" type="button" class="page_content__header__button">-->

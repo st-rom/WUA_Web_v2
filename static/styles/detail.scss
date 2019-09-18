@@ -2,8 +2,6 @@ table
 {
   border-collapse: collapse;
   border-spacing: 0px;
-  //width: 70%;
-  max-width: 70%;
 }
 table, th, td
 {
@@ -11,10 +9,12 @@ table, th, td
   border: 1px solid rgba(0,0,0,0.3);
 }
 section{
+max-width: 70%;
+}
+main{
   display: flex;
   justify-content: center;
 }
-
 td:first-child{
   padding-left:20px;
 }

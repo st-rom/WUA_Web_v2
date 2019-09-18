@@ -1,7 +1,6 @@
 table {
   border-collapse: collapse;
   border-spacing: 0px;
-  max-width: 70%;
 }
 
 table, th, td {
@@ -10,6 +9,10 @@ table, th, td {
 }
 
 section {
+  max-width: 70%;
+}
+
+main {
   display: flex;
   justify-content: center;
 }
