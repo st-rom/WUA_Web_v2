@@ -1,9 +1,10 @@
 {% extends 'base.html' %}
 {% load static %}
+{% load market_extras %}
 
 {% block title %}
     <title>Generators List | WUA</title>
-    <link rel="stylesheet" href="{% static 'styles/styles.css' %}">
+    <link rel="stylesheet" href="{% static 'styles/market_list.css' %}">
 {% endblock %}
 
 
@@ -50,7 +51,9 @@
                 <li class="page_content__result_block__results__sample">
                     <a href="{% url 'generator_detail' pk=post.pk %}">
                         <img src="{% static 'imgs/NoImageFound.png' %}" class="page_content__result_block__results__sample__picture">
-                        <h4 class="page_content__result_block__results__sample__name">{{ post.name }}</h4>
+                        <div class="page_content__result_block__results__sample__name">
+                            {{ post.name }}
+                        </div>
                         <span class="page_content__result_block__results__sample__address-and-worktime">Згенеровано відходів: {{ post.tonnes_total|floatformat:3 }} тонн</span>
 <!--                    <address class="page_content__result_block__results__sample__address-and-worktime">м. Київ, вул. Мечнікова, 125а</address>-->
 <!--                    <span class="page_content__result_block__results__sample__address-and-worktime">7:00 - 17:00 НД - вихідний</span>-->
@@ -58,6 +61,12 @@
                 </li>
                 {% endfor %}
             </ul>
+                <div class="pages_panel">
+                    {% multiply page_num|add:"-1" 12 as current_page %}
+                    <pre class="pages_panel__text"> {{ current_page|add:"1" }}-{{ current_page|add:"12" }} з {{ all_gens_num }}</pre>
+                    <button type='button' class="pages_panel__button" onclick="location.href='/market/list/page_{{ page_num|add:"-1"|stringformat:"i" }}'"><</button>
+                    <button type='button' class="pages_panel__button" onclick="location.href='/market/list/page_{{ page_num|add:"1"|stringformat:"i" }}'">></button>
+                </div>
         </section>
     </section>
 {% endblock %}

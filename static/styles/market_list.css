@@ -77,7 +77,7 @@ body {
   padding-left: 15px;
 }
 .page_content__submit_button {
-  background-color: #55eca7;
+  background-color: #62E6AC;
   width: 200px;
   height: 51px;
   border-radius: 15px;
@@ -100,7 +100,7 @@ body {
 .page_content__result_block__results {
   display: flex;
   flex-wrap: wrap;
-  justify-content: flex-start;
+  justify-content: center;
   padding-left: 0;
   margin-bottom: 10px;
 }
@@ -115,8 +115,12 @@ body {
   flex-direction: column;
   padding: 5px 5px 20px 5px;
   margin: 26.2px;
+  max-width: 28%;
+  min-width: 340px;
+  overflow: hidden;
 }
 .page_content__result_block__results__sample a {
+  width: 100%;
   text-decoration: none;
   color: #000000;
   display: block;
@@ -128,9 +132,24 @@ body {
   box-shadow: 0px 0px 5px 4px #b5b5b5;
 }
 .page_content__result_block__results__sample__name {
-  font-family: "Roboto", sans-serif;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  display: -webkit-box;
+  line-height: 33px;
+  /* fallback */
+  max-height: 99px;
+  /* fallback */
+  -webkit-line-clamp: 3;
+  /* number of lines to show */
+  -webkit-box-orient: vertical;
   font-size: 26px;
-  margin: 20px 0 10px 20px;
+  font-weight: bold;
+  margin: 20px 0;
+}
+.page_content__result_block__results__sample__name:hover {
+  display: block;
+  max-height: none;
+  -webkit-line-clamp: none;
 }
 .page_content__result_block__results__sample__address-and-worktime {
   font-family: "Roboto", sans-serif;
@@ -140,4 +159,38 @@ body {
   color: darkgray;
 }
 
-/*# sourceMappingURL=styles.css.map */
+.pages_panel {
+  display: flex;
+  align-items: center;
+  align-content: space-between;
+  border: solid #c0c0c0 2px;
+  height: 47px;
+  align-self: center;
+  border-radius: 10px;
+}
+.pages_panel :nth-child(2) {
+  border-right: solid #c0c0c0 2px;
+  border-left: solid #c0c0c0 2px;
+}
+.pages_panel__text {
+  font-size: 20px;
+  font-family: "Roboto", sans-serif;
+  height: 51px;
+  line-height: 51px;
+  text-align: center;
+  margin: 5px;
+  padding: 15px;
+}
+.pages_panel__button {
+  cursor: pointer;
+  font-size: 20px;
+  font-family: "Roboto", sans-serif;
+  text-align: center;
+  height: 51px;
+  width: 40px;
+  margin: -1px;
+  border: none;
+  background: none;
+}
+
+/*# sourceMappingURL=market_list.css.map */

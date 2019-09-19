@@ -476,7 +476,7 @@ let main = function () {
                         if (divergence > 0) text += '+'
                         text += `${divergence}`
 
-                        return idx !== i ? text : "ЄДРПОУ: " + a[0] + "  КОАТУУ: " + a[3];
+                        return idx !== i ? text : a[0] + "  КОАТУУ: " + a[3];
                     })
                     .call(wrap, xScale.bandwidth() * 0.8)
 
@@ -500,7 +500,10 @@ let main = function () {
 
                 chart.selectAll('.bar__limit').remove();
                 chart.selectAll('.divergence').remove()
-            });
+            })
+            // .on('click', function(){
+            //     //'/market/details/' + pk
+            // });
 
         barGroups
             .append('text')

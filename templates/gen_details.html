@@ -10,7 +10,7 @@
 {% block content %}
 <main>
     <section>
-        <table>
+        <table class="details" id="main-table">
             <caption><b><h2>{{ gen.name }}</h2></b></caption>
           <tr>
            <td>ЄДРПОУ</td>
@@ -41,100 +41,111 @@
            </td>
           </tr>
           <tr>
-           <td>Згенеровано відходів в тоннах</td>
+           <td title='{{ tooltip.0 }}'>Згенеровано відходів в тоннах</td>
            <td>{{ gen.tonnes_total|floatformat:3 }}</td>
           </tr>
                 <tr>
-           <td>Відходів в одиницях Пзув</td>
+           <td title='{{ tooltip.1 }}'>Відходів в одиницях Пзув</td>
            <td>{{ gen.pzuv_total|floatformat:3 }}</td>
           </tr>
                <tr>
-           <td>Відходи I класу</td>
+           <td title='{{ tooltip.2 }}{{ tooltip_ending }}'>Відходи I класу</td>
            <td>{{ gen.tonnes_1|floatformat:3 }}</td>
           </tr>
                <tr>
-           <td>Відходи II класу</td>
+           <td title='{{ tooltip.3 }}{{ tooltip_ending }}'>Відходи II класу</td>
            <td>{{ gen.tonnes_2|floatformat:3 }}</td>
           </tr>
                <tr>
-           <td>Відходи III класу</td>
+           <td title='{{ tooltip.4 }}{{ tooltip_ending }}'>Відходи III класу</td>
            <td>{{ gen.tonnes_3|floatformat:3 }}</td>
           </tr>
                     <tr>
-           <td>Відходи IV класу</td>
+           <td title='{{ tooltip.5 }}{{ tooltip_ending }}'>Відходи IV класу</td>
            <td>{{ gen.tonnes_4|floatformat:3 }}</td>
           </tr>
         </table>
 
-    <!--     <tfoot>-->
-    <!--      <tr>-->
-    <!--       <th colspan="3">Subtotal</th>-->
-    <!--       <td> 110.00</td>-->
-    <!--      </tr>-->
-    <!--      <tr>-->
-    <!--       <th>Tax</th>-->
-    <!--       <td> 8% </td>-->
-    <!--       <td>8.80</td>-->
-    <!--      </tr>-->
-    <!--      <tr>-->
-    <!--       <th colspan="3">Grand Total</th>-->
-    <!--       <td>$ 118.80</td>-->
-    <!--      </tr>-->
-    <!--     </tfoot>-->
-        </table>
     </section>
+    <a class="more_button" href="#years-table" onclick="showYearsTable()">ДЕТАЛЬНІШЕ</a>
+    <table class="details" id="years-table" hidden>
+        <caption><h3>Задекларована кількість відходів підприємства за роками*</h3></caption>
+        <tr>
+            <th></th>
+            <th>2015</th>
+            <th>2016</th>
+            <th>2017</th>
+            <th>2018</th>
+            <th>2019</th>
+        </tr>
+        <tr>
+           <td title='{{ tooltip.0 }}'>Згенеровано відходів в тоннах</td>
+           <td>{{ gen.tonnes_total_2015|floatformat:3 }}</td>
+           <td>{{ gen.tonnes_total_2016|floatformat:3 }}</td>
+           <td>{{ gen.tonnes_total_2017|floatformat:3 }}</td>
+           <td>{{ gen.tonnes_total_2018|floatformat:3 }}</td>
+           <td>{{ gen.tonnes_total_2019|floatformat:3 }}</td>
+          </tr>
+        <tr>
+           <td title='{{ tooltip.1 }}'>Відходів в одиницях Пзув</td>
+           <td>{{ gen.pzuv_total_2015|floatformat:3 }}</td>
+           <td>{{ gen.pzuv_total_2016|floatformat:3 }}</td>
+           <td>{{ gen.pzuv_total_2017|floatformat:3 }}</td>
+           <td>{{ gen.pzuv_total_2018|floatformat:3 }}</td>
+           <td>{{ gen.pzuv_total_2019|floatformat:3 }}</td>
+        </tr>
+        <tr>
+           <td title='{{ tooltip.2 }}{{ tooltip_ending }}'>Відходи I класу</td>
+           <td>{{ gen.tonnes_1_2015|floatformat:3 }}</td>
+           <td>{{ gen.tonnes_1_2016|floatformat:3 }}</td>
+           <td>{{ gen.tonnes_1_2017|floatformat:3 }}</td>
+           <td>{{ gen.tonnes_1_2018|floatformat:3 }}</td>
+           <td>{{ gen.tonnes_1_2019|floatformat:3 }}</td>
+        </tr>
+        <tr>
+           <td title='{{ tooltip.3 }}{{ tooltip_ending }}'>Відходи II класу</td>
+           <td>{{ gen.tonnes_2_2015|floatformat:3 }}</td>
+           <td>{{ gen.tonnes_2_2016|floatformat:3 }}</td>
+           <td>{{ gen.tonnes_2_2017|floatformat:3 }}</td>
+           <td>{{ gen.tonnes_2_2018|floatformat:3 }}</td>
+           <td>{{ gen.tonnes_2_2019|floatformat:3 }}</td>
+        </tr>
+        <tr>
+           <td title='{{ tooltip.4 }}{{ tooltip_ending }}'>Відходи III класу</td>
+           <td>{{ gen.tonnes_3_2015|floatformat:3 }}</td>
+           <td>{{ gen.tonnes_3_2016|floatformat:3 }}</td>
+           <td>{{ gen.tonnes_3_2017|floatformat:3 }}</td>
+           <td>{{ gen.tonnes_3_2018|floatformat:3 }}</td>
+           <td>{{ gen.tonnes_3_2019|floatformat:3 }}</td>
+        </tr>
+        <tr>
+           <td title='{{ tooltip.5 }}{{ tooltip_ending }}'>Відходи IV класу</td>
+           <td>{{ gen.tonnes_4_2015|floatformat:3 }}</td>
+           <td>{{ gen.tonnes_4_2016|floatformat:3 }}</td>
+           <td>{{ gen.tonnes_4_2017|floatformat:3 }}</td>
+           <td>{{ gen.tonnes_4_2018|floatformat:3 }}</td>
+           <td>{{ gen.tonnes_4_2019|floatformat:3 }}</td>
+        </tr>
+     </table>
 </main>
-<!--<section class="page_content">-->
-<!--        <header class="page_content__header">-->
-<!--            <button onclick="location.href='market_create-lot.html'" type="button" class="page_content__header__button">-->
-<!--                Я ХОЧУ УТИЛІЗУВАТИ-->
-<!--            </button>-->
-<!--            <button onclick="location.href='market_find-lot.html'" class="page_content__header__button page_content__header__button&#45;&#45;selected">-->
-<!--                Я ХОЧУ ЗНАЙТИ ПЕРЕРОБКУ-->
-<!--            </button>-->
-<!--        </header>-->
-<!--        <p class="page_content__title">-->
-<!--            <strong>Підприємства, що приймають</strong><br>-->
-<!--            <span>та переробляють сміття</span>-->
-<!--        </p>-->
-<!--        <form class="page_content__form">-->
-<!--            &lt;!&ndash;<label for="city_name"></label>&ndash;&gt;-->
-<!--            <select name="city" id='city_name' class="page_content__selector_city">-->
-<!--                <option value="">Виберіть місто</option>-->
-<!--                <option value="kyiv">Київ</option>-->
-<!--                <option value="khmelnytsky">Хмельницкий</option>-->
-<!--                <option value="lviv">Львів</option>-->
-<!--                <option value="kharkiv">Харків</option>-->
-<!--                <option value="odesa">Одеса</option>-->
-<!--            </select>-->
-<!--            <input name="waste_type" class="page_content__waste_type" placeholder="Тип відходів">-->
-<!--            <button type="submit" class="page_content__submit_button">Пошук</button>-->
-<!--        </form>-->
-<!--        <section class="page_content__result_block">-->
-<!--&lt;!&ndash;            <p><strong>Шини</strong> переробляють такі підприємства:</p>&ndash;&gt;-->
-<!--            <p><strong>Компанії</strong>, що генерують відходи</p>-->
-<!--            <nav class="page_content__result_block__switchers">-->
-<!--                <button class="page_content__header__button page_content__header__button&#45;&#45;selected">-->
-<!--                    СПИСОК-->
-<!--                </button>-->
-<!--                <button class="page_content__header__button">-->
-<!--                    КАРТА-->
-<!--                </button>-->
-<!--            </nav>-->
-<!--            <ul class="page_content__result_block__results">-->
-<!--                {% for post in posts %}-->
-<!--                <a href="{% url 'gen_details' pk=post.pk %}">-->
-<!--                <li class="page_content__result_block__results__sample">-->
-<!--                    <img src="../static/imgs/NoImageFound.png" class="page_content__result_block__results__sample__picture">-->
-<!--                    <h4 class="page_content__result_block__results__sample__name">{{ post.name }}</h4>-->
-<!--                    <span class="page_content__result_block__results__sample__address-and-worktime">Згенеровано відходів: {{ post.tonnes_total|floatformat:3 }} тонн</span>-->
-<!--&lt;!&ndash;                    <address class="page_content__result_block__results__sample__address-and-worktime">м. Київ, вул. Мечнікова, 125а</address>&ndash;&gt;-->
-<!--&lt;!&ndash;                    <span class="page_content__result_block__results__sample__address-and-worktime">7:00 - 17:00 НД - вихідний</span>&ndash;&gt;-->
+<footer>
+    <span>* - Декларації почали розміщатись у відкритому доступі починаючи з 2015 року</span>
+</footer>
 
-<!--                </li>-->
-<!--                </a>-->
-<!--                {% endfor %}-->
-<!--            </ul>-->
-<!--        </section>-->
-<!--    </section>-->
+<script>
+    let table = document.getElementById('years-table')
+    let b = document.getElementsByClassName('more_button')[0];
+    function showYearsTable() {
+        if(table.hasAttribute("hidden")){
+            table.removeAttribute("hidden")
+            b.innerHTML = 'СКАСУВАТИ';
+            b.style.backgroundColor = '#a5b7ac'
+        }
+        else{
+            table.setAttribute("hidden", true)
+            b.innerHTML = 'ДЕТАЛЬНІШЕ';
+            b.style.backgroundColor = '#62E6AC'
+        }
+    }
+</script>
 {% endblock %}
