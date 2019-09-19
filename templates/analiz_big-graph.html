@@ -14,7 +14,7 @@
 {% block content %}
     {% include 'analytics_menu.html' %}
     <section class="stat-content">
-        <input type="image" class="menu-button" src="{% static 'imgs/menu.png' %}" onclick="showOptionsMenu()" width="50" height="50" transform="translate(100, 100)"/>
+        <input type="image" class="menu-button" src="{% static 'imgs/arrow_menu.png' %}" onclick="showOptionsMenu()" width="50" height="50" transform="translate(100, 100)"/>
         <aside class="filters graph-lineage">
             <div class="filters__param-ver">
                 <label for="city-selector" class="label_selector">Виберіть область:</label>
@@ -96,9 +96,11 @@
         function showOptionsMenu() {
             if(menu.style.display !== 'none'){
                 menu.style.display = 'none';
+                btn.style.transform = 'rotateY(180deg)';
             }
             else{
                 menu.style.display = 'flex';
+                btn.style.transform = 'rotateY(0deg)';
             }
         }
         var dataset = d3.csv("{% static 'data/all_gen_wyear.csv' %}");
