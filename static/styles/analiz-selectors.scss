@@ -51,7 +51,7 @@ $color-brand: #62E6AC;
     }
     &.graph-management{
       width: 85%;
-      align-items: end;
+      align-items: end !important;
       justify-content: end;
       & div{
         //margin-left:  15px;

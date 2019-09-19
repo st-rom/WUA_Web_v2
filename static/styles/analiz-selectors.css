@@ -50,7 +50,7 @@
 }
 .filters__param-hor.graph-management {
   width: 85%;
-  align-items: end;
+  align-items: end !important;
   justify-content: end;
 }
 .selector_city {
