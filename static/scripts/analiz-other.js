@@ -1,11 +1,12 @@
 var width = 600;
-var height = 400;
+var height = 380;
 var a = [{level:1},{level:2},{level:3},{level:4}]
 
 // a circle chart needs a radius
 const koatuu = ['05', '07', '12', '14', '18', '21', '23', '26', '32', '35', '44', '46', '48', '51', '53', '56', '59', '61', '63', '65', '68', '71', '73', '74', '01']
 const obls = ['Всі області', 'Вінницька область', 'Волинська область', 'Дніпропетровська область', 'Донецька область', 'Житомирська область', 'Закарпатська область', 'Запорізька область', 'Івано-Франківська область', 'Київська область', 'Кіровоградська область', 'Луганська область', 'Львівська область', 'Миколаївська область', 'Одеська область', 'Полтавська область', 'Рівненська область', 'Сумська область', 'Тернопільська область', 'Харківська область', 'Херсонська область', 'Хмельницька область', 'Черкаська область', 'Чернівецька область', 'Чернігівська область',  'АР Крим' ]
 const years = ['2015', '2016', '2017', '2018', '2019']
+const int_to_roman = {'1': 'І', '2': 'ІІ', '3': 'ІІІ', '4': 'ІV'}
 
 let sel_city = document.getElementById('city-selector');
 let sel_city_value = sel_city.value;
@@ -24,7 +25,7 @@ var radius = Math.min(width, height) / 2;
 var which_analytic = d3.select('.stat-selector__button:nth-child(3)')
 which_analytic.attr('class', 'stat-selector__button stat-selector__button__selected')
 
-var legendRectSize = 25; // defines the size of the colored squares in legend
+var legendRectSize = 24; // defines the size of the colored squares in legend
 var legendSpacing = 6; // defines spacing between squares
 
 // define color scale
@@ -105,7 +106,7 @@ let main = function () {
             by_year_sum += data_filtered.reduce( function(cnt,o){ return cnt + o['fields']['tonnes_' + i.toString() + '_' + sel_year_values[j]]; }, 0)
             // by_year_sum += results['fields']['tonnes_' + i.toString() + '_' + sel_year_values[j]]
         }
-        dataset['class_' + i.toString()] = by_year_sum
+        dataset['Відходи ' + int_to_roman[i.toString()] + ' класу'] = by_year_sum
     }
     console.log(dataset)
 
@@ -122,7 +123,7 @@ var svg = d3.select('#chart') // select element in the DOM with id 'chart'
     .attr('width', width) // set the width of the svg element we just added
     .attr('height', height) // set the height of the svg element we just added
     .append('g') // append 'g' element to the svg element
-    .attr('transform', 'translate(' + (width / 2 - 90)  + ',' + (height / 2) + ')'); // our reference is now to the 'g' element. centerting the 'g' element to the svg element
+    .attr('transform', 'translate(' + (width / 2 - 100)  + ',' + (height / 2) + ')'); // our reference is now to the 'g' element. centerting the 'g' element to the svg element
 
 
 var arc = d3.arc()

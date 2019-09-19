@@ -25,7 +25,7 @@ SECRET_KEY = 'g$!1i&#1yx-7cj!4+7bm5lc*zcvcg3aln=coo=jsb6%*4+=y=b'
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = False
 
-ALLOWED_HOSTS = ['localhost', '127.0.0.1', 'wua.digital']
+ALLOWED_HOSTS = ['localhost', '127.0.0.1', 'wua.digital', 'stroman.pythonanywhere.com']
 
 
 # Application definition
@@ -36,10 +36,11 @@ INSTALLED_APPS = [
     'django.contrib.contenttypes',
     'django.contrib.sessions',
     'django.contrib.messages',
-    'livereload',
+    # 'livereload',
     'django.contrib.staticfiles',
     'market',
-    'pages'
+    'analytics',
+    'pages',
 ]
 
 MIDDLEWARE = [
@@ -50,7 +51,7 @@ MIDDLEWARE = [
     'django.contrib.auth.middleware.AuthenticationMiddleware',
     'django.contrib.messages.middleware.MessageMiddleware',
     'django.middleware.clickjacking.XFrameOptionsMiddleware',
-    'livereload.middleware.LiveReloadScript',
+    # 'livereload.middleware.LiveReloadScript',
 ]
 
 ROOT_URLCONF = 'wua.urls'
