@@ -2,21 +2,8 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="7ef3f295-43a6-464f-8d1d-996763d919c4" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/market/templatetags/__init__.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/market/templatetags/market_extras.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/market/urls.py" beforeDir="false" afterPath="$PROJECT_DIR$/market/urls.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/market/views.py" beforeDir="false" afterPath="$PROJECT_DIR$/market/views.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/static/scripts/analiz_big-graph.js" beforeDir="false" afterPath="$PROJECT_DIR$/static/scripts/analiz_big-graph.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/static/styles/detail.css" beforeDir="false" afterPath="$PROJECT_DIR$/static/styles/detail.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/static/styles/detail.css.map" beforeDir="false" afterPath="$PROJECT_DIR$/static/styles/detail.css.map" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/static/styles/detail.scss" beforeDir="false" afterPath="$PROJECT_DIR$/static/styles/detail.scss" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/static/styles/styles.css" beforeDir="false" afterPath="$PROJECT_DIR$/static/styles/market_list.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/static/styles/styles.css.map" beforeDir="false" afterPath="$PROJECT_DIR$/static/styles/market_list.css.map" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/static/styles/styles.scss" beforeDir="false" afterPath="$PROJECT_DIR$/static/styles/market_list.scss" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/templates/gen_details.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/gen_details.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/templates/header.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/header.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/templates/market_find.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/market_find.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/base.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/base.html" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -172,7 +159,7 @@
       <workItem from="1568580318558" duration="15796000" />
       <workItem from="1568719165590" duration="17405000" />
       <workItem from="1568756374355" duration="13796000" />
-      <workItem from="1568834937721" duration="21546000" />
+      <workItem from="1568834937721" duration="23339000" />
     </task>
     <task id="LOCAL-00001" summary="new icon">
       <created>1568664776348</created>
@@ -223,7 +210,21 @@
       <option name="project" value="LOCAL" />
       <updated>1568836515340</updated>
     </task>
-    <option name="localTasksCounter" value="8" />
+    <task id="LOCAL-00008" summary="market list changes">
+      <created>1568895583898</created>
+      <option name="number" value="00008" />
+      <option name="presentableId" value="LOCAL-00008" />
+      <option name="project" value="LOCAL" />
+      <updated>1568895583898</updated>
+    </task>
+    <task id="LOCAL-00009" summary="add host">
+      <created>1568895771090</created>
+      <option name="number" value="00009" />
+      <option name="presentableId" value="LOCAL-00009" />
+      <option name="project" value="LOCAL" />
+      <updated>1568895771090</updated>
+    </task>
+    <option name="localTasksCounter" value="10" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -250,7 +251,9 @@
     <MESSAGE value="fixed menu padding" />
     <MESSAGE value="add main page redirect" />
     <MESSAGE value="minor fixes" />
-    <option name="LAST_COMMIT_MESSAGE" value="minor fixes" />
+    <MESSAGE value="market list changes" />
+    <MESSAGE value="add host" />
+    <option name="LAST_COMMIT_MESSAGE" value="add host" />
   </component>
   <component name="com.intellij.coverage.CoverageDataManagerImpl">
     <SUITE FILE_PATH="coverage/wua_proba$db_filler.coverage" NAME="db_filler Coverage Results" MODIFIED="1568296641236" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/wua" />
