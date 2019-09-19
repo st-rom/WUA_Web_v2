@@ -1,3 +1,6 @@
+import {Spinner} from './spin.js';
+
+
 var width = 600;
 var height = 380;
 var a = [{level:1},{level:2},{level:3},{level:4}]
@@ -20,6 +23,30 @@ let sel_year_values = function (){
 }();
 
 var radius = Math.min(width, height) / 2;
+
+var opts = {
+    lines: 13, // The number of lines to draw
+    length: 38, // The length of each line
+    width: 17, // The line thickness
+    radius: 45, // The radius of the inner circle
+    scale: 1, // Scales overall size of the spinner
+    corners: 1, // Corner roundness (0..1)
+    color: 'black', // CSS color or array of colors
+    fadeColor: 'transparent', // CSS color or array of colors
+    speed: 1, // Rounds per second
+    rotate: 0, // The rotation offset
+    animation: 'spinner-line-fade-quick', // The CSS animation name for the lines
+    direction: 1, // 1: clockwise, -1: counterclockwise
+    zIndex: 2e9, // The z-index (defaults to 2000000000)
+    className: 'spinner', // The CSS class to assign to the spinner
+    top: '50%', // Top position relative to parent
+    left: '50%', // Left position relative to parent
+    shadow: '0 0 1px transparent', // Box-shadow for the lines
+    position: 'fixed' // Element positioning
+};
+
+var target = document.getElementById('spinner');
+var spinner = new Spinner(opts).spin(target);
 
 // legend dimensions
 var which_analytic = d3.select('.stat-selector__button:nth-child(3)')
@@ -44,6 +71,7 @@ d3.select("#city-selector")
 
 
 let main = function () {
+    spinner.spin(target)
     if((sel_city_value !== sel_city.value) && (sel_city_value !== '')){
         // nx = 0;
         sel_city_value = sel_city.value;
@@ -108,7 +136,7 @@ let main = function () {
         }
         dataset['Відходи ' + int_to_roman[i.toString()] + ' класу'] = by_year_sum
     }
-    console.log(dataset)
+    // console.log(dataset)
 
 
 var color = d3.scaleOrdinal(colors);
@@ -172,6 +200,7 @@ Object.values(dict).forEach(function(d) {
   d.count = +d.count; // calculate count as we iterate through the data
   d.enabled = true; // add enabled property to track which entries are checked
 });
+spinner.stop(target)
 
 // creating the chart
 var path = svg.selectAll('path') // select all path elements inside the svg. specifically the 'g' element. they don't exist yet but they will be created below
