@@ -9,6 +9,7 @@
   top: 230px;
   width: 150px;
   display: flex;
+  align-items: center;
 }
 .menu-options__button {
   transform: rotateY(180deg);

@@ -11,6 +11,7 @@ $color-brand: #62E6AC;
   top: 230px;
   width: 150px;
   display: flex;
+  align-items: center;
   &__button{
       transform: rotateY(180deg);
   }
