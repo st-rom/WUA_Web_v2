@@ -1,9 +1,17 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="7ef3f295-43a6-464f-8d1d-996763d919c4" name="Default Changelist" comment="">
+    <list default="true" id="7ef3f295-43a6-464f-8d1d-996763d919c4" name="Default Changelist" comment="arrow button">
+      <change afterPath="$PROJECT_DIR$/static/scripts/analytics_menu-options.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/templates/analytics_options-menu.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/templates/home_ua.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/static/styles/analiz-selectors.css" beforeDir="false" afterPath="$PROJECT_DIR$/static/styles/analiz-selectors.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/styles/analiz-selectors.css.map" beforeDir="false" afterPath="$PROJECT_DIR$/static/styles/analiz-selectors.css.map" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/static/styles/analiz-selectors.scss" beforeDir="false" afterPath="$PROJECT_DIR$/static/styles/analiz-selectors.scss" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/analiz_big-graph.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/analiz_big-graph.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/analiz_map.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/analiz_map.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/analiz_other.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/analiz_other.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/wua/settings.py" beforeDir="false" afterPath="$PROJECT_DIR$/wua/settings.py" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -29,9 +37,9 @@
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
       <list>
+        <option value="Python Script" />
         <option value="HTML File" />
         <option value="JavaScript File" />
-        <option value="Python Script" />
       </list>
     </option>
   </component>
@@ -43,17 +51,18 @@
   <component name="PropertiesComponent">
     <property name="DefaultHtmlFileTemplate" value="HTML File" />
     <property name="WebServerToolWindowFactoryState" value="false" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/pages" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/templates" />
     <property name="settings.editor.selected.configurable" value="com.jetbrains.python.configuration.PyActiveSdkModuleConfigurable" />
   </component>
   <component name="RecentsManager">
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/static/scripts" />
+      <recent name="$PROJECT_DIR$/static" />
+    </key>
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/templates" />
       <recent name="$PROJECT_DIR$/pages" />
       <recent name="$PROJECT_DIR$/static/data" />
-      <recent name="$PROJECT_DIR$/templates" />
-    </key>
-    <key name="MoveFile.RECENT_KEYS">
-      <recent name="$PROJECT_DIR$/static" />
     </key>
   </component>
   <component name="RunDashboard">
@@ -161,7 +170,7 @@
       <workItem from="1568719165590" duration="17405000" />
       <workItem from="1568756374355" duration="13796000" />
       <workItem from="1568834937721" duration="29449000" />
-      <workItem from="1568909882557" duration="4630000" />
+      <workItem from="1568909882557" duration="12782000" />
     </task>
     <task id="LOCAL-00001" summary="new icon">
       <created>1568664776348</created>
@@ -254,7 +263,14 @@
       <option name="project" value="LOCAL" />
       <updated>1568917476689</updated>
     </task>
-    <option name="localTasksCounter" value="14" />
+    <task id="LOCAL-00014" summary="add align !important">
+      <created>1568917838989</created>
+      <option name="number" value="00014" />
+      <option name="presentableId" value="LOCAL-00014" />
+      <option name="project" value="LOCAL" />
+      <updated>1568917838989</updated>
+    </task>
+    <option name="localTasksCounter" value="15" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -287,7 +303,8 @@
     <MESSAGE value="other graph fixes" />
     <MESSAGE value="mobile responsive" />
     <MESSAGE value="arrow button" />
-    <option name="LAST_COMMIT_MESSAGE" value="arrow button" />
+    <MESSAGE value="add align !important" />
+    <option name="LAST_COMMIT_MESSAGE" value="add align !important" />
   </component>
   <component name="com.intellij.coverage.CoverageDataManagerImpl">
     <SUITE FILE_PATH="coverage/wua_proba$db_filler.coverage" NAME="db_filler Coverage Results" MODIFIED="1568296641236" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/wua" />

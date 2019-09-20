@@ -6,11 +6,20 @@ $color-brand: #62E6AC;
   margin-left: 35px;
 }
 
-.menu-button{
-  position: relative;
-  top: 60px;
-  transform: rotateY(180deg);
+.menu-options{
+  position: absolute;
+  top: 230px;
   display: none;
+  &__button{
+      transform: rotateY(180deg);
+  }
+  &__label{
+    height: 50px;
+    line-height: 50px;
+    text-align: center;
+    width: auto !important;
+    margin: 0 10px 0 0 !important;
+  }
 }
 
 
@@ -240,6 +249,7 @@ input[type=number]::-webkit-outer-spin-button {
 .stat-selector{
   display: flex;
   justify-content: center;
+  width: 100%;
   &__button {
     width: 340px;
     height: 51px;

@@ -1,0 +1,11 @@
+{% load static %}
+
+<div class="menu-options">
+    <label for="options-menu" class="label_selector menu-options__label">Опції</label>
+    <input type="image" id="options-menu" class="menu-options__button" src="{% static 'imgs/arrow_menu.png' %}" onclick="showOptionsMenu()" width="50" height="50" transform="translate(100, 100)" />
+</div>
+
+
+<!--<script type="module">-->
+<!--    import {showOptionsMenu} from "{% static 'scripts/analytics_menu-options.js' %}"; window.showOptionsMenu = showOptionsMenu;-->
+<!--</script>-->

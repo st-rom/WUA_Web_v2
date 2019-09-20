@@ -4,11 +4,20 @@
   margin-left: 35px;
 }
 
-.menu-button {
-  position: relative;
-  top: 60px;
-  transform: rotateY(180deg);
+.menu-options {
+  position: absolute;
+  top: 230px;
   display: none;
+}
+.menu-options__button {
+  transform: rotateY(180deg);
+}
+.menu-options__label {
+  height: 50px;
+  line-height: 50px;
+  text-align: center;
+  width: auto !important;
+  margin: 0 10px 0 0 !important;
 }
 
 .filters {
@@ -194,6 +203,7 @@ input[type=number]::-webkit-outer-spin-button {
 .stat-selector {
   display: flex;
   justify-content: center;
+  width: 100%;
 }
 .stat-selector__button {
   width: 340px;
