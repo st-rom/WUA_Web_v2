@@ -1,14 +1,10 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="7ef3f295-43a6-464f-8d1d-996763d919c4" name="Default Changelist" comment="arrow button">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+    <list default="true" id="7ef3f295-43a6-464f-8d1d-996763d919c4" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/static/styles/analiz-selectors.css" beforeDir="false" afterPath="$PROJECT_DIR$/static/styles/analiz-selectors.css" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/static/styles/analiz-selectors.css.map" beforeDir="false" afterPath="$PROJECT_DIR$/static/styles/analiz-selectors.css.map" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/static/styles/analiz-selectors.scss" beforeDir="false" afterPath="$PROJECT_DIR$/static/styles/analiz-selectors.scss" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/static/styles/market_list.css" beforeDir="false" afterPath="$PROJECT_DIR$/static/styles/market_list.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/static/styles/market_list.scss" beforeDir="false" afterPath="$PROJECT_DIR$/static/styles/market_list.scss" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/templates/coming_soon.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/coming_soon.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/wua/settings.py" beforeDir="false" afterPath="$PROJECT_DIR$/wua/settings.py" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -168,7 +164,7 @@
       <workItem from="1568756374355" duration="13796000" />
       <workItem from="1568834937721" duration="29449000" />
       <workItem from="1568909882557" duration="13653000" />
-      <workItem from="1568986035915" duration="1131000" />
+      <workItem from="1568986035915" duration="1377000" />
     </task>
     <task id="LOCAL-00001" summary="new icon">
       <created>1568664776348</created>
@@ -275,7 +271,21 @@
       <option name="project" value="LOCAL" />
       <updated>1568984698592</updated>
     </task>
-    <option name="localTasksCounter" value="16" />
+    <task id="LOCAL-00016" summary="mob version">
+      <created>1568988047254</created>
+      <option name="number" value="00016" />
+      <option name="presentableId" value="LOCAL-00016" />
+      <option name="project" value="LOCAL" />
+      <updated>1568988047254</updated>
+    </task>
+    <task id="LOCAL-00017" summary="align options">
+      <created>1568988172206</created>
+      <option name="number" value="00017" />
+      <option name="presentableId" value="LOCAL-00017" />
+      <option name="project" value="LOCAL" />
+      <updated>1568988172206</updated>
+    </task>
+    <option name="localTasksCounter" value="18" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -310,7 +320,9 @@
     <MESSAGE value="arrow button" />
     <MESSAGE value="add align !important" />
     <MESSAGE value="mob fix" />
-    <option name="LAST_COMMIT_MESSAGE" value="mob fix" />
+    <MESSAGE value="mob version" />
+    <MESSAGE value="align options" />
+    <option name="LAST_COMMIT_MESSAGE" value="align options" />
   </component>
   <component name="com.intellij.coverage.CoverageDataManagerImpl">
     <SUITE FILE_PATH="coverage/wua_proba$db_filler.coverage" NAME="db_filler Coverage Results" MODIFIED="1568296641236" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/wua" />
