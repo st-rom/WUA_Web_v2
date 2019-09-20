@@ -105,7 +105,7 @@ body {
   margin-bottom: 10px;
 }
 .page_content__result_block__results__sample {
-  flex: 1 0 28%;
+  flex: 1 0 25%;
   border: solid #c0c0c0 1px;
   list-style-type: none;
   display: flex;
@@ -115,7 +115,7 @@ body {
   flex-direction: column;
   padding: 5px 5px 20px 5px;
   margin: 26.2px;
-  max-width: 28%;
+  max-width: 25%;
   min-width: 340px;
   overflow: hidden;
 }

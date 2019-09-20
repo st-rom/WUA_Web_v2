@@ -9,7 +9,8 @@ $color-brand: #62E6AC;
 .menu-options{
   position: absolute;
   top: 230px;
-  display: none;
+  width: 150px;
+  display: flex;
   &__button{
       transform: rotateY(180deg);
   }
@@ -44,7 +45,7 @@ $color-brand: #62E6AC;
     align-items: center;
     align-content: space-between;
     &.kilkist_selector{
-      align-items: end;
+      align-items: flex-end;
     }
     &.box{
       border: solid #c0c0c0 2px;
@@ -60,7 +61,7 @@ $color-brand: #62E6AC;
     }
     &.graph-management{
       width: 85%;
-      align-items: end !important;
+      align-items: flex-end !important;
       justify-content: end;
       & div{
         //margin-left:  15px;

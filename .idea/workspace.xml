@@ -2,16 +2,13 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="7ef3f295-43a6-464f-8d1d-996763d919c4" name="Default Changelist" comment="arrow button">
-      <change afterPath="$PROJECT_DIR$/static/scripts/analytics_menu-options.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/templates/analytics_options-menu.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/templates/home_ua.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/static/styles/analiz-selectors.css" beforeDir="false" afterPath="$PROJECT_DIR$/static/styles/analiz-selectors.css" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/static/styles/analiz-selectors.css.map" beforeDir="false" afterPath="$PROJECT_DIR$/static/styles/analiz-selectors.css.map" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/static/styles/analiz-selectors.scss" beforeDir="false" afterPath="$PROJECT_DIR$/static/styles/analiz-selectors.scss" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/templates/analiz_big-graph.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/analiz_big-graph.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/templates/analiz_map.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/analiz_map.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/templates/analiz_other.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/analiz_other.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/styles/market_list.css" beforeDir="false" afterPath="$PROJECT_DIR$/static/styles/market_list.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/styles/market_list.scss" beforeDir="false" afterPath="$PROJECT_DIR$/static/styles/market_list.scss" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/coming_soon.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/coming_soon.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/wua/settings.py" beforeDir="false" afterPath="$PROJECT_DIR$/wua/settings.py" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -170,7 +167,8 @@
       <workItem from="1568719165590" duration="17405000" />
       <workItem from="1568756374355" duration="13796000" />
       <workItem from="1568834937721" duration="29449000" />
-      <workItem from="1568909882557" duration="12782000" />
+      <workItem from="1568909882557" duration="13653000" />
+      <workItem from="1568986035915" duration="1131000" />
     </task>
     <task id="LOCAL-00001" summary="new icon">
       <created>1568664776348</created>
@@ -270,7 +268,14 @@
       <option name="project" value="LOCAL" />
       <updated>1568917838989</updated>
     </task>
-    <option name="localTasksCounter" value="15" />
+    <task id="LOCAL-00015" summary="mob fix">
+      <created>1568984698547</created>
+      <option name="number" value="00015" />
+      <option name="presentableId" value="LOCAL-00015" />
+      <option name="project" value="LOCAL" />
+      <updated>1568984698592</updated>
+    </task>
+    <option name="localTasksCounter" value="16" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -304,7 +309,8 @@
     <MESSAGE value="mobile responsive" />
     <MESSAGE value="arrow button" />
     <MESSAGE value="add align !important" />
-    <option name="LAST_COMMIT_MESSAGE" value="add align !important" />
+    <MESSAGE value="mob fix" />
+    <option name="LAST_COMMIT_MESSAGE" value="mob fix" />
   </component>
   <component name="com.intellij.coverage.CoverageDataManagerImpl">
     <SUITE FILE_PATH="coverage/wua_proba$db_filler.coverage" NAME="db_filler Coverage Results" MODIFIED="1568296641236" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/wua" />
