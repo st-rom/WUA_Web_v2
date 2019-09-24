@@ -10,7 +10,7 @@ $color-brand: #62E6AC;
   position: absolute;
   top: 230px;
   width: 150px;
-  display: flex;
+  display: none;
   align-items: center;
   &__button{
       transform: rotateY(180deg);

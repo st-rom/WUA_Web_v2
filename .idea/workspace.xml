@@ -2,8 +2,6 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="7ef3f295-43a6-464f-8d1d-996763d919c4" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/static/styles/market_list.css" beforeDir="false" afterPath="$PROJECT_DIR$/static/styles/market_list.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/static/styles/market_list.scss" beforeDir="false" afterPath="$PROJECT_DIR$/static/styles/market_list.scss" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/wua/settings.py" beforeDir="false" afterPath="$PROJECT_DIR$/wua/settings.py" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -164,6 +162,7 @@
       <workItem from="1568834937721" duration="29449000" />
       <workItem from="1568909882557" duration="13653000" />
       <workItem from="1568986035915" duration="1624000" />
+      <workItem from="1569320511989" duration="239000" />
     </task>
     <task id="LOCAL-00001" summary="new icon">
       <created>1568664776348</created>

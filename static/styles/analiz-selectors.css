@@ -8,7 +8,7 @@
   position: absolute;
   top: 230px;
   width: 150px;
-  display: flex;
+  display: none;
   align-items: center;
 }
 .menu-options__button {
