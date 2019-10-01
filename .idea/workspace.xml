@@ -2,7 +2,14 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="7ef3f295-43a6-464f-8d1d-996763d919c4" name="Default Changelist" comment="">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pages/views.py" beforeDir="false" afterPath="$PROJECT_DIR$/pages/views.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/styles/header.css" beforeDir="false" afterPath="$PROJECT_DIR$/static/styles/header.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/styles/header.css.map" beforeDir="false" afterPath="$PROJECT_DIR$/static/styles/header.css.map" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/styles/header.scss" beforeDir="false" afterPath="$PROJECT_DIR$/static/styles/header.scss" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/header.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/header.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/wua/settings.py" beforeDir="false" afterPath="$PROJECT_DIR$/wua/settings.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/wua/urls.py" beforeDir="false" afterPath="$PROJECT_DIR$/wua/urls.py" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -41,18 +48,20 @@
   <component name="PropertiesComponent">
     <property name="DefaultHtmlFileTemplate" value="HTML File" />
     <property name="WebServerToolWindowFactoryState" value="false" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/templates" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/static/scripts" />
     <property name="settings.editor.selected.configurable" value="com.jetbrains.python.configuration.PyActiveSdkModuleConfigurable" />
   </component>
   <component name="RecentsManager">
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/static/scripts" />
+      <recent name="$PROJECT_DIR$/templates" />
+      <recent name="$PROJECT_DIR$/static/styles" />
+      <recent name="$PROJECT_DIR$/static/imgs" />
+      <recent name="$PROJECT_DIR$/pages" />
+    </key>
     <key name="MoveFile.RECENT_KEYS">
       <recent name="$PROJECT_DIR$/static/scripts" />
       <recent name="$PROJECT_DIR$/static" />
-    </key>
-    <key name="CopyFile.RECENT_KEYS">
-      <recent name="$PROJECT_DIR$/templates" />
-      <recent name="$PROJECT_DIR$/pages" />
-      <recent name="$PROJECT_DIR$/static/data" />
     </key>
   </component>
   <component name="RunDashboard">
@@ -162,7 +171,10 @@
       <workItem from="1568834937721" duration="29449000" />
       <workItem from="1568909882557" duration="13653000" />
       <workItem from="1568986035915" duration="1624000" />
-      <workItem from="1569320511989" duration="239000" />
+      <workItem from="1569320511989" duration="16126000" />
+      <workItem from="1569532810156" duration="4102000" />
+      <workItem from="1569749779454" duration="2107000" />
+      <workItem from="1569909716806" duration="482000" />
     </task>
     <task id="LOCAL-00001" summary="new icon">
       <created>1568664776348</created>
@@ -290,7 +302,14 @@
       <option name="project" value="LOCAL" />
       <updated>1568988217292</updated>
     </task>
-    <option name="localTasksCounter" value="19" />
+    <task id="LOCAL-00019" summary="hide options">
+      <created>1569320975395</created>
+      <option name="number" value="00019" />
+      <option name="presentableId" value="LOCAL-00019" />
+      <option name="project" value="LOCAL" />
+      <updated>1569320975395</updated>
+    </task>
+    <option name="localTasksCounter" value="20" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -328,7 +347,8 @@
     <MESSAGE value="mob version" />
     <MESSAGE value="align options" />
     <MESSAGE value="fix settings" />
-    <option name="LAST_COMMIT_MESSAGE" value="fix settings" />
+    <MESSAGE value="hide options" />
+    <option name="LAST_COMMIT_MESSAGE" value="hide options" />
   </component>
   <component name="com.intellij.coverage.CoverageDataManagerImpl">
     <SUITE FILE_PATH="coverage/wua_proba$db_filler.coverage" NAME="db_filler Coverage Results" MODIFIED="1568296641236" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/wua" />

@@ -1,7 +1,11 @@
 {% load static %}
 <header class="page_header">
     <link rel="stylesheet" href="{% static 'styles/header.css' %}">
-    <img src="{% static 'imgs/logo2.png' %}" class="page_header__logo">
+    <div class="page_header__logo">
+        <a onclick="location.href='//wuadigital.tilda.ws/'" class="page_header__logo--link">
+            <img src="{% static 'imgs/logo2.png' %}" class="page_header__logo--image">
+        </a>
+    </div>
     <nav class="page_header__main_buttons_panel">
 <!--        <button onclick="location.href='//wuadigital.tilda.ws/'" type="button" class="page_header__main_buttons_panel__button_nav">-->
 <!--            ГОЛОВНА-->
@@ -29,8 +33,17 @@
         <!--<button onclick="location.href='http://www.google.com'" type="button" class="page_header__smaller_buttons_panel__button_nav">-->
             <!--Мій кабінет-->
         <!--</button>-->
-        <!--<button onclick="location.href='http://www.google.com'" type="button" class="page_header__smaller_buttons_panel__button_nav lang">-->
-            <!--<span class="lang&#45;&#45;selected">UA</span> / EN-->
-        <!--</button>-->
+        <div>
+            <button onclick="location.href='http://www.google.com'" type="button" class="page_header__smaller_buttons_panel__button_nav lang">
+                <span class="lang--selected">UA</span>
+            </button>
+            <span> / </span>
+            <button onclick="location.href='http://www.google.com'" type="button" class="page_header__smaller_buttons_panel__button_nav lang">
+                 <span>EN</span>
+            </button>
+        </div>
     </nav>
+    <script>
+
+    </script>
 </header>

@@ -9,7 +9,7 @@ body{
 .page_header{
   display: flex;
   justify-content: space-between;
-  align-items: flex-end;
+  align-items: center;
   position: fixed;
   background: white;
   padding: 25px 2.5%;
@@ -21,10 +21,17 @@ body{
   z-index: 5;
   &__logo{
     width: 150px;
-    height: 60px;
+    height: 64px;
+    &--link{
+      cursor: pointer;
+    }
+    &--image{
+      width: 150px;
+      height: 60px;
+    }
   }
   &__main_buttons_panel{
-    width: 50%;
+    width: 60%;
     display: flex;
     justify-content: space-around;
     //& :hover{
@@ -93,4 +100,14 @@ body{
       cursor: pointer;
     }
   }
+}
+
+
+.lang--selected {
+  font-weight: bold;
+  color: black;
+}
+
+span{
+      font-family: 'Roboto', sans-serif;
 }

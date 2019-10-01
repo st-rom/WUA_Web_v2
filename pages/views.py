@@ -11,8 +11,13 @@ def about(request):
     return render(request, 'coming_soon.html', {})
 
 
+def home_view2(request):
+    return render(request, 'page7345315.html', {})
+
+
 def home_view(request):
-    return HttpResponseRedirect('https://wuadigital.tilda.ws/')
+    return render(request, 'page7361961.html', {})
+    # return HttpResponseRedirect('https://wuadigital.tilda.ws/')
 
 
 def error_404_view(request, exception):
