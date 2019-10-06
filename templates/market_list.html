@@ -1,0 +1,72 @@
+{% extends 'base.html' %}
+{% load static %}
+{% load market_extras %}
+
+{% block title %}
+    <title>Список | WUA</title>
+    <link rel="stylesheet" href="{% static 'styles/market.css' %}">
+{% endblock %}
+
+
+{% block content %}
+<section class="page_content">
+        <header class="page_content__header">
+            <button onclick="location.href='/market/create/'" type="button" class="page_content__header__button selected">
+                Я ХОЧУ УТИЛІЗУВАТИ
+            </button>
+            <button onclick="location.href='/market/list/'" class="page_content__header__button">
+                Я ХОЧУ ЗНАЙТИ ВІДХОДИ
+            </button>
+        </header>
+<!--        <p class="page_content__title">-->
+<!--            <strong>Підприємства, що приймають</strong><br>-->
+<!--            <span>та переробляють сміття</span>-->
+<!--        </p>-->
+<!--        <form class="page_content__form">-->
+<!--            &lt;!&ndash;<label for="city_name"></label>&ndash;&gt;-->
+<!--            <select name="city" id='city_name' class="page_content__selector_city">-->
+<!--                <option value="">Виберіть місто</option>-->
+<!--                <option value="kyiv">Київ</option>-->
+<!--                <option value="khmelnytsky">Хмельницкий</option>-->
+<!--                <option value="lviv">Львів</option>-->
+<!--                <option value="kharkiv">Харків</option>-->
+<!--                <option value="odesa">Одеса</option>-->
+<!--            </select>-->
+<!--            <input name="waste_type" class="page_content__waste_type" placeholder="Тип відходів">-->
+<!--            <button type="submit" class="page_content__submit_button">Пошук</button>-->
+<!--        </form>-->
+        <section class="page_content__result_block">
+<!--            <p><strong>Шини</strong> переробляють такі підприємства:</p>-->
+            <p><strong>Компанії</strong>, що генерують <strong>найбільшу</strong> кількість відходів</p>
+            <nav class="page_content__result_block__switchers">
+                <button class="page_content__header__button page_content__header__button--selected">
+                    ТАБЛИЦЯ
+                </button>
+<!--                <button class="page_content__header__button">-->
+<!--                    КАРТА-->
+<!--                </button>-->
+            </nav>
+            <ul class="page_content__result_block__results-table">
+                {% for post in posts %}
+                <li class="page_content__result_block__results-table__sample">
+                    <a href="{% url 'generator_detail' pk=post.pk %}">
+                        <img src="{% static 'imgs/NoImageFound.png' %}" class="page_content__result_block__results-table__sample__picture">
+                        <div class="page_content__result_block__results-table__sample__name">
+                            {{ post.name }}
+                        </div>
+                        <span class="page_content__result_block__results-table__sample__address-and-worktime">Згенеровано відходів: {{ post.tonnes_total|floatformat:3 }} тонн</span>
+<!--                    <address class="page_content__result_block__results-table__sample__address-and-worktime">м. Київ, вул. Мечнікова, 125а</address>-->
+<!--                    <span class="page_content__result_block__results-table__sample__address-and-worktime">7:00 - 17:00 НД - вихідний</span>-->
+                    </a>
+                </li>
+                {% endfor %}
+            </ul>
+                <div class="pages_panel">
+                    {% multiply page_num|add:"-1" 12 as current_page %}
+                    <pre class="pages_panel__text"> {{ current_page|add:"1" }}-{{ current_page|add:"12" }} з {{ all_gens_num }}</pre>
+                    <button type='button' class="pages_panel__button" onclick="location.href='/market/list/page_{{ page_num|add:"-1"|stringformat:"i" }}'"><</button>
+                    <button type='button' class="pages_panel__button" onclick="location.href='/market/list/page_{{ page_num|add:"1"|stringformat:"i" }}'">></button>
+                </div>
+        </section>
+    </section>
+{% endblock %}

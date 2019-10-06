@@ -1,40 +1,45 @@
 {% extends 'base.html' %}
 {% load static %}
-{% load market_extras %}
+<!--{% load market_extras %}-->
 
 {% block title %}
-    <title>Generators List | WUA</title>
-    <link rel="stylesheet" href="{% static 'styles/market_list.css' %}">
+    <title>Пошук | WUA</title>
+    <link rel="stylesheet" href="{% static 'styles/market.css' %}">
 {% endblock %}
 
 
 {% block content %}
 <section class="page_content">
-<!--        <header class="page_content__header">-->
-<!--            <button onclick="location.href='/market/create/'" type="button" class="page_content__header__button">-->
-<!--                Я ХОЧУ УТИЛІЗУВАТИ-->
-<!--            </button>-->
-<!--            <button onclick="location.href='/market/list/'" class="page_content__header__button page_content__header__button&#45;&#45;selected">-->
-<!--                Я ХОЧУ ЗНАЙТИ ПЕРЕРОБКУ-->
-<!--            </button>-->
-<!--        </header>-->
+        <header class="page_content__header">
+            <button onclick="location.href='/market/create/'" type="button" class="page_content__header__button">
+                Я ХОЧУ УТИЛІЗУВАТИ
+            </button>
+            <button onclick="location.href='/market/list/'" class="page_content__header__button selected">
+                Я ХОЧУ ЗНАЙТИ ВІДХОДИ
+            </button>
+        </header>
 <!--        <p class="page_content__title">-->
 <!--            <strong>Підприємства, що приймають</strong><br>-->
 <!--            <span>та переробляють сміття</span>-->
 <!--        </p>-->
-<!--        <form class="page_content__form">-->
-<!--            &lt;!&ndash;<label for="city_name"></label>&ndash;&gt;-->
-<!--            <select name="city" id='city_name' class="page_content__selector_city">-->
-<!--                <option value="">Виберіть місто</option>-->
-<!--                <option value="kyiv">Київ</option>-->
-<!--                <option value="khmelnytsky">Хмельницкий</option>-->
-<!--                <option value="lviv">Львів</option>-->
-<!--                <option value="kharkiv">Харків</option>-->
-<!--                <option value="odesa">Одеса</option>-->
-<!--            </select>-->
+        <form class="page_content__form">
+            <!--<label for="city_name"></label>-->
+            <select name="city" id='city_name' class="page_content__selector_city">
+                <option value="">Виберіть місто</option>
+                <option value="kyiv">Київ</option>
+                <option value="khmelnytsky">Хмельницкий</option>
+                <option value="lviv">Львів</option>
+                <option value="kharkiv">Харків</option>
+                <option value="odesa">Одеса</option>
+            </select>
 <!--            <input name="waste_type" class="page_content__waste_type" placeholder="Тип відходів">-->
-<!--            <button type="submit" class="page_content__submit_button">Пошук</button>-->
-<!--        </form>-->
+            <div class="selector_city name_search">
+                <input type="text" placeholder="Тип відходів" autocomplete="off" class="name_search__field" onkeyup="filterInputFunction()">
+                <div class="name_search__list">
+                </div>
+            </div>
+            <button type="submit" class="page_content__submit_button">Пошук</button>
+        </form>
         <section class="page_content__result_block">
 <!--            <p><strong>Шини</strong> переробляють такі підприємства:</p>-->
             <p><strong>Компанії</strong>, що генерують <strong>найбільшу</strong> кількість відходів</p>
@@ -46,17 +51,17 @@
 <!--                    КАРТА-->
 <!--                </button>-->
             </nav>
-            <ul class="page_content__result_block__results">
+            <ul class="page_content__result_block__results-list">
                 {% for post in posts %}
-                <li class="page_content__result_block__results__sample">
+                <li class="page_content__result_block__results-list__sample">
                     <a href="{% url 'generator_detail' pk=post.pk %}">
-                        <img src="{% static 'imgs/NoImageFound.png' %}" class="page_content__result_block__results__sample__picture">
-                        <div class="page_content__result_block__results__sample__name">
+<!--                        <img src="{% static 'imgs/NoImageFound.png' %}" class="page_content__result_block__results-list__sample__picture">-->
+                        <div class="page_content__result_block__results-list__sample__name">
                             {{ post.name }}
                         </div>
-                        <span class="page_content__result_block__results__sample__address-and-worktime">Згенеровано відходів: {{ post.tonnes_total|floatformat:3 }} тонн</span>
-<!--                    <address class="page_content__result_block__results__sample__address-and-worktime">м. Київ, вул. Мечнікова, 125а</address>-->
-<!--                    <span class="page_content__result_block__results__sample__address-and-worktime">7:00 - 17:00 НД - вихідний</span>-->
+                        <span class="page_content__result_block__results-list__sample__address-and-worktime">Згенеровано відходів: {{ post.tonnes_total|floatformat:3 }} тонн</span>
+<!--                    <address class="page_content__result_block__results-list__sample__address-and-worktime">м. Київ, вул. Мечнікова, 125а</address>-->
+<!--                    <span class="page_content__result_block__results-list__sample__address-and-worktime">7:00 - 17:00 НД - вихідний</span>-->
                     </a>
                 </li>
                 {% endfor %}
@@ -69,4 +74,62 @@
                 </div>
         </section>
     </section>
+<!--{{ options|safe }}-->
+    <script src="https://d3js.org/d3.v5.min.js"></script>
+    <script>
+        let options = {{ options|safe }}
+        // console.log(options)
+        // console.log({{options|safe}})
+        let data = {{ all_posts|safe }}
+        function filterInputFunction() {
+            console.log(12)
+            var input, filter, a, i, div, txtValue;
+            input = document.getElementsByClassName("name_search__field")[0];
+            filter = input.value.toUpperCase();
+            div = document.getElementsByClassName("name_search")[0];
+            a = div.getElementsByTagName("a");
+            for (i = 0; i < a.length; i++) {
+                txtValue = a[i].textContent || a[i].innerText;
+                if (txtValue.toUpperCase().indexOf(filter) > -1 && input.value !== '') {
+                    a[i].style.display = "";
+                } else {
+                    a[i].style.display = "none";
+                }
+            }
+        }
+
+
+        // d3.selectAll('a').nodes().forEach(function (elem) {
+        //     elem.addEventListener("click", function () {
+        //         d3.select('.name_search__field')
+        //             .value = this.text;
+        //     })
+        // })
+
+        d3.select('.name_search__list')
+            .selectAll("*")
+            .remove()
+        // .data(data.map(s => s[0].split(".").shift().join(".").substr(1)))ґ
+        d3.select('.name_search__list')
+            .selectAll()
+            .data(options.map((s, i) => [s, i]))
+            .enter()
+            .append('a')
+            .style('display', 'none')
+            .text(d => d[0])
+            // .text((s, i) => (parseInt(inp_num[0].value) + i).toString() + '. ' + s[0])
+            // .attr("href", d => "#" + parseInt(d[1]));
+            .attr("id", d => d[1])
+            .attr("title", d => d[0]);
+
+        d3.selectAll('a').nodes().forEach(function (elem) {
+            elem.addEventListener("click", function () {
+                document.getElementsByClassName('name_search__field')[0].value = this.text;
+                // console.log(d3.select('.name_search__field').value, this.text)
+                filterInputFunction();
+                this.style.display = "none";
+            }
+        )})
+        var dataset = d3.csv("{% static 'data/declarations_full.csv' %}");
+    </script>
 {% endblock %}

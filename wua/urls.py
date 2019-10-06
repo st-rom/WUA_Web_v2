@@ -15,7 +15,9 @@ Including another URLconf
 """
 from django.contrib import admin
 from django.urls import path, include
-from pages.views import about, home_view, home_view2
+from pages.views import about, home_view, home_view2#, IndexView
+from django.conf.urls import url
+
 
 urlpatterns = [
     path('admin/', admin.site.urls),
@@ -24,5 +26,8 @@ urlpatterns = [
     path('about/', about, name='about_us'),
     path('analytics/', include('analytics.urls')),
     path('market/', include('market.urls')),
+    # url(r'^$',
+    #     IndexView.as_view(),
+    #     name='index'),
 ]
 handler404 = 'pages.views.error_404_view'

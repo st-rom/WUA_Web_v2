@@ -2,12 +2,22 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="7ef3f295-43a6-464f-8d1d-996763d919c4" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/templates/landing_ua.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/templates/market_list.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/db.sqlite3" beforeDir="false" afterPath="$PROJECT_DIR$/db.sqlite3" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/market/db_fill.py" beforeDir="false" afterPath="$PROJECT_DIR$/market/db_fill.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/market/migrations/0001_initial.py" beforeDir="false" afterPath="$PROJECT_DIR$/market/migrations/0001_initial.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/market/urls.py" beforeDir="false" afterPath="$PROJECT_DIR$/market/urls.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/market/views.py" beforeDir="false" afterPath="$PROJECT_DIR$/market/views.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pages/models.py" beforeDir="false" afterPath="$PROJECT_DIR$/pages/models.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/pages/views.py" beforeDir="false" afterPath="$PROJECT_DIR$/pages/views.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/static/styles/header.css" beforeDir="false" afterPath="$PROJECT_DIR$/static/styles/header.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/static/styles/header.css.map" beforeDir="false" afterPath="$PROJECT_DIR$/static/styles/header.css.map" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/static/styles/header.scss" beforeDir="false" afterPath="$PROJECT_DIR$/static/styles/header.scss" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/styles/market_list.css" beforeDir="false" afterPath="$PROJECT_DIR$/static/styles/market.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/styles/market_list.css.map" beforeDir="false" afterPath="$PROJECT_DIR$/static/styles/market.css.map" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/styles/market_list.scss" beforeDir="false" afterPath="$PROJECT_DIR$/static/styles/market.scss" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/gen_details.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/gen_details.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/templates/header.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/header.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/market_find.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/market_find.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/wua/settings.py" beforeDir="false" afterPath="$PROJECT_DIR$/wua/settings.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/wua/urls.py" beforeDir="false" afterPath="$PROJECT_DIR$/wua/urls.py" afterDir="false" />
     </list>
@@ -28,15 +38,20 @@
     <option name="HIDDEN_KINDS">
       <set />
     </option>
-    <expand />
+    <expand>
+      <path>
+        <item name="Database" type="3277223f:DatabaseStructure$DbRootGroup" />
+        <item name="db" type="feb32156:DbDataSourceImpl" />
+      </path>
+    </expand>
     <select />
   </component>
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
       <list>
         <option value="Python Script" />
-        <option value="HTML File" />
         <option value="JavaScript File" />
+        <option value="HTML File" />
       </list>
     </option>
   </component>
@@ -174,7 +189,9 @@
       <workItem from="1569320511989" duration="16126000" />
       <workItem from="1569532810156" duration="4102000" />
       <workItem from="1569749779454" duration="2107000" />
-      <workItem from="1569909716806" duration="482000" />
+      <workItem from="1569909716806" duration="9893000" />
+      <workItem from="1570279461743" duration="18637000" />
+      <workItem from="1570324807908" duration="7136000" />
     </task>
     <task id="LOCAL-00001" summary="new icon">
       <created>1568664776348</created>
@@ -309,7 +326,14 @@
       <option name="project" value="LOCAL" />
       <updated>1569320975395</updated>
     </task>
-    <option name="localTasksCounter" value="20" />
+    <task id="LOCAL-00020" summary="hide options">
+      <created>1569910282835</created>
+      <option name="number" value="00020" />
+      <option name="presentableId" value="LOCAL-00020" />
+      <option name="project" value="LOCAL" />
+      <updated>1569910282835</updated>
+    </task>
+    <option name="localTasksCounter" value="21" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
